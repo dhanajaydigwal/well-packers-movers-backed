@@ -26,14 +26,15 @@ exports.createLead = async (req, res) => {
 
     // Zod Validation Error
     if (error.name === "ZodError") {
-      return res.status(400).json({
-        success: false,
-        errors: error.errors.map(err => ({
-          field: err.path[0],
-          message: err.message
-        }))
-      });
-    }
+  return res.status(400).json({
+    success: false,
+    errors: error.issues.map(err => ({
+      field: err.path[0],
+      message: err.message
+    }))
+  });
+}
+
 
     console.error(error);
     res.status(500).json({ success: false, message: "Server error" });
