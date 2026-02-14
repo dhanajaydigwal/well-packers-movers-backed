@@ -5,7 +5,7 @@ let keys;
 if (process.env.LEAD_API_JSON) {
   keys = JSON.parse(process.env.LEAD_API_JSON);
 } else {
-  keys = require("../lead-api.json"); // local development only
+  keys = require("../lead-api.json"); // local dev only
 }
 
 const auth = new google.auth.GoogleAuth({
