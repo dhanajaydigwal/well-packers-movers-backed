@@ -1,7 +1,6 @@
 [build]
-  functions = "netlify/functions"
+  command = ""          # no build needed
+  publish = "."         # optional, no static site
 
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
+[functions]
+  directory = "netlify/functions"
