@@ -1,5 +1,5 @@
 const { google } = require("googleapis");
-const auth = require("../config/googleAuth");
+const auth = require("../config/googleAuth"); // uses environment variables now
 
 const SPREADSHEET_ID = process.env.SHEET_ID;
 
