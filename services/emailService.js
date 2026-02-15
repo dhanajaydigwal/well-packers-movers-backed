@@ -17,7 +17,7 @@ async function sendEmail(data) {
     // 1️⃣ CUSTOMER CONFIRMATION MAIL
     // =========================
     const info = await transporter.sendMail({
-      from: `"CarryLog Pack And Move" <${process.env.EMAIL_USER}>`,
+      from: `"CarryPack Logistics" <${process.env.EMAIL_USER}>`,
       to: data.email,
       subject: "Moving Request Received 🚚",
       html: `
@@ -25,7 +25,7 @@ async function sendEmail(data) {
           <p>Hello ${data.name},</p>
 
           <p>
-            Thank you for choosing <b>CarryLog Pack And Move</b>.
+            Thank you for choosing <b>CarryPack Logistics</b>.
             We have successfully received your moving request. Here are the details:
           </p>
 
@@ -60,7 +60,7 @@ async function sendEmail(data) {
 
           <p>
             Regards,<br/>
-            <b>CarryLog Pack And Move</b><br/>
+            <b>CarryPack Logistics</b><br/>
             📞 8949437619<br/>
             ✉️ ${process.env.EMAIL_USER}
           </p>
@@ -72,7 +72,7 @@ async function sendEmail(data) {
     // 2️⃣ ADMIN LEAD ALERT MAIL
     // =========================
     await transporter.sendMail({
-      from: `"CarryLog Lead Alert" <${process.env.EMAIL_USER}>`,
+      from: `"CarryPack Logistics Lead Alert" <${process.env.EMAIL_USER}>`,
       to: "carrypacklogistics@gmail.com",
       subject: "🚨 New Moving Lead Received",
       html: `

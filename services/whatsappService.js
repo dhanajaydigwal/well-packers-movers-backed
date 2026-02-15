@@ -50,7 +50,7 @@ Message: ${data.message}
   const customerMessage = `
 Hello ${data.name} 👋
 
-Thank you for choosing CarryLog Pack And Move 🚚
+Thank you for choosing CarryPack Logistics 🚚
 
 We have received your moving request.
 
